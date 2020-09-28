@@ -1,0 +1,192 @@
+/* указываю основной шрифт сайта*/
+body {
+    margin: 0;
+
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+    color: #6c7279;
+
+    background: #fff;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+/*    не увеличивает размер бокса при увеличении отступов*/
+}
+
+h1,h2,h3,h4,h5,h6 {
+    margin: 0;
+}
+
+p {
+    margin: 0 0 10px;
+}
+
+/*container
+===================*/
+.container {
+    width: 100%; /*ширина блока%*/
+    max-width: 1170px; /*но максимальная 1170px*/
+    margin: 0 auto; /* 0 сверху и снизу, центр*/
+}
+
+/*header
+===================*/
+
+.header {
+    width: 100%;
+    height: 100p;
+
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 100;
+/*    Поситион делает элемент поверх всех*/
+}
+
+.header__inner {
+    display: flex;
+    justify-content: space-between;
+    padding: 35px 0;
+    align-items: center; /*Выровнял элементы*/
+/*    что бы logo и nav были с разных сторон*/
+
+    border-bottom: 1px solid #4d5066;
+
+}
+
+/*Nav
+===================*/
+
+.nav {
+    display: flex;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+/*    Все буквы заглавные*/
+}
+
+.nav__link {
+    margin-left: 50px;
+/*    Оступ слева при flex*/
+
+    color: #fff;
+    text-decoration: none;
+    opacity: 0.75;
+
+    transition: opacity .1s linear;
+}
+
+.nav__link:first-child {
+    margin-left: 0;
+}
+/* Отключает отступ у первого элемента*/
+
+.nav__link:hover {
+    opacity: 1;
+}
+
+/* Intro
+===================*/
+
+.intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+/*    перевернул в колонну, выровнял по центру*/
+    height: 750px;
+    padding-top: 100px;
+
+    background: #31344e url(../Images/intro-bg.jpg) no-repeat center / cover;
+/*    cover что бы картинка занимала весь блок*/
+/*    background: #31344e покажет при медленном инете*/
+}
+
+.intro__inner {
+    width: 100%;
+    max-width: 970px;
+    margin: 0 auto;
+
+    text-align: center;
+}
+
+.intro__title {
+    margin: 0 0 41px;
+    /*внешний отступ*/
+
+    font-size: 65px;
+    line-height: 1.1; /*Можно и px, но так, если поменять размер шрифта, то поменяется и line-height, 65px = 1, 71px = 1.1~;*/
+    font-family: 'Open Sans', sans-serif;
+    color: #fff;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.intro__subtitle {
+    margin: 0 0 77px;
+    /*внешний отступ*/
+
+    font-size: 22px;
+    line-height: 1.5;
+    color: #fff;
+    text-align: center;
+    font-weight: 400;
+}
+
+/* Button
+===================*/
+
+.btn {
+    display: inline-block;
+/*    что бы задавать ~пэдинги?*/
+    vertical-align: top;
+    font-size: 13px;
+    font-weight: 600;
+
+    font-family: 'Raleway', sans-serif;
+    cursor: pointer;
+    border: 0px;
+    /*для button*/
+
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 3px;
+    transition: background .1s linear;
+}
+
+.btn--red {
+    background: #e84545;
+    padding: 17px 40px;
+}
+
+.btn--red:hover {
+    background: rgba(232, 69, 69, 0.8);
+    color: rgba(255, 255, 255, 0.8);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
