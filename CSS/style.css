@@ -151,6 +151,7 @@ p {
     border: 0px;
     /*для button*/
 
+    text-align: center;
     color: #fff;
     text-transform: uppercase;
     text-decoration: none;
@@ -166,6 +167,11 @@ p {
 .btn--red:hover {
     background: rgba(232, 69, 69, 0.8);
     color: rgba(255, 255, 255, 0.8);
+}
+
+.btn--red--long {
+    background: #e84545;
+    padding: 17px 80px;
 }
 
 /* Features
@@ -322,6 +328,10 @@ p {
 
 }
 
+.social--footer {
+    justify-content: center;
+}
+
 .social__items {
     display: flex;
     width: 40px;
@@ -343,12 +353,26 @@ p {
     fill: #e84545;
 }
 
+.social--footer .social__items {
+    background-color: transparent;
+    border: 2px solid #fff;
+    border-radius: 3px;
+}
+
+.social--footer .social__items:hover {
+    background-color: #fff;
+}
+
 .social__icon {
     display: block;
     width: 18px;
     fill: #c6cacc;
     /*заливка svg*/
     transition: .3s linear;
+}
+
+.social--footer .social__icon {
+    fill: #fff;
 }
 
 /* Clients
@@ -403,16 +427,59 @@ p {
     text-transform: uppercase;
 }
 
+/* Download
+===================*/
 
+.download {
+    margin: 100px 0;
+    text-align: center;
+}
 
+.download__title {
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: #2d3033;
+    font-weight: 300;
+}
 
+.download__text {
+    margin-bottom: 30px;
+    color: #2d3033;
+    font-weight: 700;
+    font-size: 15px;
+    text-transform: uppercase;
+}
 
+/* Footer
+===================*/
 
+.footer {
+    background: #3a3e64;
+    padding: 70px 0;
+}
 
+.footer__inner {
+    display: flex;
+    flex-wrap: wrap;
+}
 
+.footer__block {
+    width: 33.333%;
+    text-align: center;
+}
 
+.footer__title {
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 700;
+    margin-bottom: 14px;
+}
 
-
+.footer__address {
+    line-height: 1.6;
+    font-style: normal;
+    color: rgba(255, 255, 255, 0.5);
+}
 
 
 
