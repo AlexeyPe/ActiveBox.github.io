@@ -166,11 +166,9 @@ p {
 
 .btn--red:hover {
     background: rgba(232, 69, 69, 0.8);
-    color: rgba(255, 255, 255, 0.8);
 }
 
-.btn--red--long {
-    background: #e84545;
+.btn--long {
     padding: 17px 80px;
 }
 
@@ -365,7 +363,7 @@ p {
 
 .social__icon {
     display: block;
-    width: 18px;
+    height: 18px;
     fill: #c6cacc;
     /*заливка svg*/
     transition: .3s linear;
@@ -455,10 +453,10 @@ p {
 
 .footer {
     background: #3a3e64;
-    padding: 70px 0;
 }
 
 .footer__inner {
+    padding: 70px 0;
     display: flex;
     flex-wrap: wrap;
 }
@@ -466,6 +464,7 @@ p {
 .footer__block {
     width: 33.333%;
     text-align: center;
+    padding: 0 15px;
 }
 
 .footer__title {
@@ -481,5 +480,24 @@ p {
     color: rgba(255, 255, 255, 0.5);
 }
 
+.footer__text {
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.5);
+}
 
+/* Copyright
+===================*/
 
+.copyright {
+    background-color: #313454;
+    padding: 20px 0;
+}
+
+.copyright__text {
+    text-align: center;
+    color: #808080;
+    line-height: 1.5
+}
+.copyright__text span {
+    color: #fff;
+}
