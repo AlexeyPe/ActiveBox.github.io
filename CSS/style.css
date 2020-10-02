@@ -1,4 +1,3 @@
-/* указываю основной шрифт сайта*/
 body {
     margin: 0;
 
@@ -13,7 +12,6 @@ body {
 *:before,
 *:after {
     box-sizing: border-box;
-/*    не увеличивает размер бокса при увеличении отступов*/
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -27,9 +25,9 @@ p {
 /*container
 ===================*/
 .container {
-    width: 100%; /*ширина блока%*/
-    max-width: 1200px; /*но максимальная 1170px*/
-    margin: 0 auto; /* 0 сверху и снизу, центр*/
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
     padding: 0 15px;
 }
 
@@ -44,16 +42,13 @@ p {
     left: 0;
     top: 0;
     z-index: 100;
-/*    Поситион делает элемент поверх всех*/
 }
 
 .header__inner {
     display: flex;
     justify-content: space-between;
     padding: 35px 0;
-    align-items: center; /*Выровнял элементы*/
-/*    что бы logo и nav были с разных сторон*/
-
+    align-items: center;
     border-bottom: 1px solid #4d5066;
 
 }
@@ -66,12 +61,10 @@ p {
     font-size: 13px;
     font-weight: 700;
     text-transform: uppercase;
-/*    Все буквы заглавные*/
 }
 
 .nav__link {
     margin-left: 50px;
-/*    Оступ слева при flex*/
 
     color: #fff;
     text-decoration: none;
@@ -83,7 +76,6 @@ p {
 .nav__link:first-child {
     margin-left: 0;
 }
-/* Отключает отступ у первого элемента*/
 
 .nav__link:hover {
     opacity: 1;
@@ -96,13 +88,11 @@ p {
     display: flex;
     flex-direction: column;
     justify-content: center;
-/*    перевернул в колонну, выровнял по центру*/
     height: 750px;
     padding-top: 100px;
 
-    background: #31344e url(../Images/intro-bg.jpg) no-repeat center / cover;
-/*    cover что бы картинка занимала весь блок*/
-/*    background: #31344e покажет при медленном инете*/
+    background: #31344e url(../Images/intro-bg.jpg) no-repeat center;
+    background-size: cover;
 }
 
 .intro__inner {
@@ -114,11 +104,10 @@ p {
 }
 
 .intro__title {
-    margin: 0 0 41px;
-    /*внешний отступ*/
+    margin: 0 0 30px;
 
     font-size: 65px;
-    line-height: 1.1; /*Можно и px, но так, если поменять размер шрифта, то поменяется и line-height, 65px = 1, 71px = 1.1~;*/
+    line-height: 1.1;
     font-family: 'Open Sans', sans-serif;
     color: #fff;
     font-weight: 700;
@@ -126,13 +115,11 @@ p {
 }
 
 .intro__subtitle {
-    margin: 0 0 77px;
-    /*внешний отступ*/
+    margin: 0 0 60px;
 
     font-size: 22px;
     line-height: 1.5;
     color: #fff;
-    text-align: center;
     font-weight: 400;
 }
 
@@ -141,7 +128,6 @@ p {
 
 .btn {
     display: inline-block;
-/*    что бы задавать ~пэдинги?*/
     vertical-align: top;
     font-size: 13px;
     font-weight: 600;
@@ -149,7 +135,6 @@ p {
     font-family: 'Raleway', sans-serif;
     cursor: pointer;
     border: 0px;
-    /*для button*/
 
     text-align: center;
     color: #fff;
@@ -224,10 +209,10 @@ p {
     height: 350px;
     position: relative;
     overflow: hidden;
-/*    что вылазит - скрыть*/
 }
 
 .works__images {
+    min-width: 100%;
     position: absolute;
     left: 50%;
     top: 50%;
@@ -247,7 +232,7 @@ p {
     background: rgba(232, 69, 69, 0.8);
 
     opacity: 0;
-    transition: opacity 0.6s linear;
+    transition: opacity 0.4s linear;
 
     position: absolute;
     left: 0;
@@ -347,7 +332,6 @@ p {
     background-color: #e8ecee;
 }
 .social__items:hover .social__icon {
-    /*работает с icon при наведении на item*/
     fill: #e84545;
 }
 
@@ -355,6 +339,7 @@ p {
     background-color: transparent;
     border: 2px solid #fff;
     border-radius: 3px;
+    margin-bottom: 30px;
 }
 
 .social--footer .social__items:hover {
@@ -365,8 +350,7 @@ p {
     display: block;
     height: 18px;
     fill: #c6cacc;
-    /*заливка svg*/
-    transition: .3s linear;
+    transition: .1s linear;
 }
 
 .social--footer .social__icon {
@@ -390,7 +374,6 @@ p {
     width: 50%;
     height: 500px;
     position: relative;
-    /*что бы спозиционировать относительно блока items*/
 }
 
 .clients__images {
@@ -399,7 +382,6 @@ p {
     right: 0;
     z-index: 1;
 }
-/*  Есть clients__items, есть clients__photo, у него есть position: relative и есть есть картинка (в clients__images с position: absolute) которая позиционируется относительно clients__photo и она прижимается кверху и вправо  */
 
 .clients__content {
     display: flex;
@@ -416,7 +398,7 @@ p {
     font-style: italic;
     color: #fff;
 
-    margin-bottom: 38px;
+    margin-bottom: 30px;
 }
 
 .clients__author {
@@ -478,6 +460,7 @@ p {
     line-height: 1.6;
     font-style: normal;
     color: rgba(255, 255, 255, 0.5);
+    margin-bottom: 30px;
 }
 
 .footer__text {
@@ -501,3 +484,193 @@ p {
 .copyright__text span {
     color: #fff;
 }
+
+/* Burger
+===================*/
+
+.burger {
+    display: none;
+    background: none;
+    border: 0;
+    padding: 10px 2px;
+    cursor: pointer;
+}
+
+.burger__item {
+    display: block;
+    width: 30px;
+    height: 3px;
+
+    background-color: #fff;
+
+    font-size: 0;
+    color: transparent;
+    position: relative;
+}
+
+.burger__item:before,
+.burger__item:after {
+    content: "";
+    width: 100%;
+    height: 100%;
+
+    background-color: #fff;
+
+    position: absolute;
+    left: 0;
+    z-index: 1;
+}
+
+.burger__item:before {
+    top: -8px;
+}
+
+.burger__item:after {
+    bottom: -8px;
+}
+
+
+/*===================
+    Media
+===================*/
+@media (max-width: 1300px) {
+    /*Works*/
+    .works__item {
+        width: 50%;
+    }
+
+}
+
+@media (max-width: 991px) {
+
+    /*Nav*/
+    .nav {
+        display: none;
+    }
+
+    /*Burger*/
+    .burger {
+        display: block;
+    }
+
+    /*Intro*/
+    .intro__title {
+        font-size: 40px;
+    }
+
+    /*Features*/
+    .features__item {
+        width: 50%;
+    }
+
+    /*Team*/
+    .team__prof {
+        font-size: 12px;
+        margin-bottom: 20px;
+    }
+
+    .team__text {
+        font-size: 16px;
+    }
+
+    /*Clients*/
+    .clients__photo {
+        width: 100%;
+        margin: 15px 0 40px;
+        overflow: hidden;
+    }
+
+    .clients__content {
+        width: 100%;
+        padding: 0 0 40px;
+    }
+}
+
+@media (max-width: 767px) {
+
+    /*Intro*/
+    .intro {
+        height: auto;
+        padding: 130px 0 30px 0;
+    }
+
+    .intro__title {
+        font-size: 30px;
+    }
+
+    .intro__subtitle {
+        margin-bottom: 30px;
+
+        font-size: 16px;
+    }
+
+    /*Features*/
+    .features {
+        margin: 40px 0;
+    }
+
+    .features__item {
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    /*Works*/
+    .works__item {
+        width: 100%;
+        height: 300px;
+    }
+
+    /*Team*/
+    .team {
+        margin: 50px 0;
+    }
+
+    .team__item {
+        width: 50%;
+    }
+
+    .team__prof {
+        font-size: 12px;
+    }
+
+    /*Clients*/
+    .clients__text {
+        font-size: 25px;
+    }
+
+    /*Download*/
+    .download {
+        margin: 50px 0;
+    }
+
+    .download__title {
+        font-size: 24px;
+    }
+
+    /*Button*/
+    .btn--long {
+        min-width: 240px;
+    }
+
+    /*Footer*/
+    .footer__inner {
+        padding: 40px;
+    }
+
+    .footer__block {
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+@media (max-width: 414px) {
+    /*Clients*/
+    .clients__images {
+        right: -120px;
+    }
+}
+
+
+
