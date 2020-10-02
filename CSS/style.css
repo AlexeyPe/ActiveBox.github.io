@@ -36,12 +36,23 @@ p {
 
 .header {
     width: 100%;
-    height: 100p;
+    height: 100px;
 
     position: absolute;
     left: 0;
     top: 0;
     z-index: 100;
+}
+
+.header.fixed {
+    position: fixed;
+    height: auto;
+    background-color: #31344e;
+}
+
+.header.fixed .header__inner {
+    padding: 15px 0;
+    border-bottom: 0;
 }
 
 .header__inner {
@@ -365,6 +376,15 @@ p {
     overflow: hidden;
 }
 
+.clients__slider {
+    height: 500px;
+    overflow: hidden;
+}
+
+.clients__slider.slick-initialized {
+    height: auto;
+}
+
 .clients__items {
     display: flex;
     flex-wrap: wrap;
@@ -405,6 +425,47 @@ p {
     color: #fff;
     font-weight: 700;
     text-transform: uppercase;
+}
+
+.slick-dots {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0 0 30px;
+    list-style: none;
+
+    width: 50%;
+
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 2;
+}
+
+.slick-dots li {
+    margin: 0 5px;
+}
+
+.slick-dots button {
+    width: 20px;
+    height: 20px;
+
+    background: #755d6e;
+    border-radius: 50%;
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+
+    font-size: 0;
+    color: transparent;
+}
+
+.slick-dots button:focus {
+    outline: 0;
+}
+
+.slick-dots .slick-active button {
+    background-color: #fff;
 }
 
 /* Download
@@ -546,6 +607,23 @@ p {
     /*Nav*/
     .nav {
         display: none;
+
+        flex-direction: column;
+        width: 100%;
+        text-align: right;
+
+        background-color: #31344e;
+        position: absolute;
+        top: 100%;
+        right: 0;
+    }
+
+    .nav.show {
+        display: flex;
+    }
+
+    .nav__link {
+        padding: 9px 15px;
     }
 
     /*Burger*/
@@ -583,6 +661,10 @@ p {
     .clients__content {
         width: 100%;
         padding: 0 0 40px;
+    }
+
+    .slick-dots {
+    width: 100%;
     }
 }
 
@@ -668,7 +750,7 @@ p {
 @media (max-width: 414px) {
     /*Clients*/
     .clients__images {
-        right: -120px;
+        right: -140px;
     }
 }
 

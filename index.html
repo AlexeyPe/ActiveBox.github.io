@@ -5,7 +5,11 @@
     <title>ActiveBox</title>
     <link rel="stylesheet" href="CSS/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Cardo:ital@1&family=Open+Sans:wght@700&family=Raleway:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
 </head>
     <body>
 <!--SPRITE-->
@@ -35,22 +39,22 @@
 </svg>
 
 <!--HEADER-->
-    <header class="header">
+    <header class="header" id="header">
         <div class="container">
             <div class="header__inner">
                 <div class="header__logo">
                     <img src="Images/ActiveBox-logo.png" alt="not">
                 </div>
 
-                <nav class="nav">
-                    <a href="#" class="nav__link">Features</a>
-                    <a href="#" class="nav__link">Works</a>
-                    <a href="#" class="nav__link">Our Team</a>
-                    <a href="#" class="nav__link">Testimonials</a>
-                    <a href="#" class="nav__link">Download</a>
+                <nav class="nav" id="nav">
+                    <a href="#" class="nav__link" data-scroll="#features">Features</a>
+                    <a href="#" class="nav__link" data-scroll="#works">Works</a>
+                    <a href="#" class="nav__link" data-scroll="#team">Our Team</a>
+                    <a href="#" class="nav__link" data-scroll="#clients">Testimonials</a>
+                    <a href="#" class="nav__link" data-scroll="#download">Download</a>
                 </nav>
 
-                <button class="burger" type="button">
+                <button class="burger" type="button" id="navToggle">
                     <span class="burger__item">Menu</span>
                 </button>
 
@@ -59,7 +63,7 @@
     </header>
 
 <!--INTRO-->
-    <div class="intro">
+    <div class="intro" id="intro">
         <div class="container">
            <div class="intro__inner">
 
@@ -73,7 +77,7 @@
     </div>
 
 <!--FEATURES-->
-    <div class="container">
+    <div class="container" id="features">
         <div class="features">
             <div class="features__item">
                 <img class="features__icon" src="Images/Features/feature1.png" alt="">
@@ -109,7 +113,7 @@
     </div> <!-- /.container-->
 
 <!--WORKS-->
-    <div class="works">
+    <div class="works" id="works">
         <div class="works__item">
             <img class="works__images" src="Images/Works/Works1.jpg" alt="">
             <div class="works__content">
@@ -169,7 +173,7 @@
     </div> <!--/.works-->
 
 <!--TEAM-->
-    <div class="team">
+    <div class="team" id="team">
         <div class="container">
             <div class="team__inner">
 
@@ -293,24 +297,44 @@
     </div> <!--/.team-->
 
 <!--CLIENTS-->
-<div class="clients">
+<div class="clients" id="clients">
     <div class="container">
-        <div class="clients__items">
-            <div class="clients__photo">
-                <img class="clients__images"src="Images/Clients/client1.jpg" alt="">
-            </div>
-            <div class="clients__content">
-                <div class="clients__text">“Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec sed odio dui. Aenean eu leo quam...”</div>
-                <div class="clients__author">
-                    Susan Sims, Interaction Designer at XYZ
+        <div class="clients__slider" id="clientsSlider">
+
+            <div class="slick-item">
+                <div class="clients__items">
+                    <div class="clients__photo">
+                        <img class="clients__images"src="Images/Clients/client1.jpg" alt="">
+                    </div>
+                    <div class="clients__content">
+                        <div class="clients__text">“Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec sed odio dui. Aenean eu leo quam...”</div>
+                        <div class="clients__author">
+                            Susan Sims, Interaction Designer at XYZ
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
+            </div><!--/.slick-item-->
+
+            <div class="slick-item">
+                <div class="clients__items">
+                    <div class="clients__photo">
+                        <img class="clients__images"src="Images/Clients/client1.jpg" alt="">
+                    </div>
+                    <div class="clients__content">
+                        <div class="clients__text">“Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia atque quas ab ad unde reiciendis vero, autem id culpa asperiores rem illo sed porro accusantium quod, dolorum voluptate eligendi, nam!”</div>
+                        <div class="clients__author">
+                            Susan Sims, Interaction Designer at XYZ
+                        </div>
+                    </div>
+                </div>
+            </div><!--/.slick-item-->
+
+        </div> <!--/.clientsSlider-->
     </div> <!--/.container-->
 </div> <!--/.clients-->
 
 <!--DOWNLOAD-->
-    <div class="download">
+    <div class="download" id="download">
        <div class="container">
 
             <h3 class="download__title">Are You Ready to Start? Download Now For Free!</h3>
@@ -381,6 +405,12 @@
            </div>
        </div>
     </footer>
+
+
+<!--   jQuery-->
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <script src="app.js"></script>
 
     </body>
 </html>
